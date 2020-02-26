@@ -1,0 +1,24 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+
+
+
+    <form action="/update/{{type.id}}" method="post">
+
+        {% csrf_token %}
+
+        <div>
+            <h3>update details</h3>
+        </div>
+
+        <div>
+            {{type.as_table}}
+        </div>
+
+        <div>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+
+{% endblock %}

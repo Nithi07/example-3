@@ -1,0 +1,33 @@
+{% extends 'common/base.html' %}
+
+
+{% block content %}
+
+
+    
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Audit code</th>
+                <th>Audit type</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for typ in types %}
+            <tr>
+                <td>{{ typ.id }}</td>
+                <td>{{ typ.audittype }}</td>
+                <td>{{ typ.auditcode }}</td>
+                <td><a href="/edit/{{ typ.id }}">Edit</a></td>
+            </tr>
+            
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+
+{% endblock %}
+

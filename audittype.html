@@ -1,0 +1,28 @@
+{% extends 'common/base.html' %}
+
+
+{% block content %}
+
+
+<form action="audittype/" method="post">
+
+    {% csrf_token %}
+
+    <div>
+        <h3>Enter project Type</h3>
+    </div>
+
+    <div>
+        <label>Audit Type</label>
+        {{ form.audittype }}
+    </div>
+
+    <div>
+        <label>Audit code</label>
+        {{ form.auditcode}}
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+{% endblock %}
